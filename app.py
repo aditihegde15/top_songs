@@ -67,4 +67,4 @@ def get_songs_by_artist(token, artist_id):
     return json_result
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
