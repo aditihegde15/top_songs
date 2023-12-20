@@ -1,11 +1,9 @@
 from flask import Flask, render_template, request, jsonify
-from dotenv import load_dotenv
 import os
 import base64
 import json
 from requests import post, get
 
-load_dotenv()
 client_id = os.environ.get("CLIENT_ID")
 client_secret = os.environ.get("CLIENT_SECRET")
 
