@@ -1,9 +1,11 @@
 from flask import Flask, render_template, request, jsonify
+from dotenv import load_dotenv
 import os
 import base64
 import json
 from requests import post, get
 
+load_dotenv()
 client_id = os.environ.get("CLIENT_ID")
 client_secret = os.environ.get("CLIENT_SECRET")
 
@@ -67,4 +69,4 @@ def get_songs_by_artist(token, artist_id):
     return json_result
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)

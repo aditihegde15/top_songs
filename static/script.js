@@ -1,4 +1,6 @@
 
+console.log("Search clicked");
+
 function search() {
     var artist = document.getElementById("artist").value;
     var xhr = new XMLHttpRequest();
@@ -19,7 +21,7 @@ function search() {
 
 function displayResults(songs) {
     var resultsDiv = document.getElementById("results");
-    resultsDiv.innerHTML = "<h2>Top Tracks:</h2>";
+    resultsDiv.innerHTML = "<h2>Top tracks you’ll probably recognize 👀</h2>";
     var s = "<table>";
     for (var i = 0; i < songs.length; i++) {
        s+= "<tr><td>" + (i + 1) + "</td><td>" + songs[i].name + "</td></tr>";
